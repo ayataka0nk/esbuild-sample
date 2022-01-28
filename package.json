@@ -4,9 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "run-p watch:*",
+    "watch:build": "sh -exec 'NODE_ENV=\\\"development\\\" node ./build.js'",
+    "watch:serve": "wait-on public/index.js && reload -d public -b"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "esbuild": "^0.14.14",
+    "typescript": "^4.5.5"
+  }
 }
