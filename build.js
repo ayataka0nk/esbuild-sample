@@ -4,7 +4,7 @@ const isDev = process.env.NODE_ENV === '"development"';
 
 build({
   define: { "process.env.NODE_ENV": process.env.NODE_ENV },
-  target: "es2015",
+  target: "es2018",
   platform: "browser",
   entryPoints: ["src/index.tsx"],
   outdir: "public",
